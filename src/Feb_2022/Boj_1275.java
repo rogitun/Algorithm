@@ -1,8 +1,6 @@
 package Feb_2022;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.StringTokenizer;
 
 public class Boj_1275 {
@@ -14,6 +12,7 @@ public class Boj_1275 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         Q = Integer.parseInt(st.nextToken());
@@ -46,6 +45,8 @@ public class Boj_1275 {
             //System.out.println( "chgnum "+changeNumber);
             update(1,S,1,a,b-changeNumber);
             System.out.println(result);
+            //bw.write(result + "\n");
+            //bw.flush();
             //System.out.println("=======================");
         }
 
