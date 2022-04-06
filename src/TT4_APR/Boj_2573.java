@@ -3,7 +3,6 @@ package TT4_APR;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -54,14 +53,12 @@ public class Boj_2573 {
             visited[peek.y][peek.x]=true;
             level=1;
             dfs(peek.y, peek.x);
-//            System.out.println(peek.y + " " + peek.x);
-//            System.out.println(bergSize + " " + level);
             if(level<bergSize) {
                System.out.println(result);
-                break;
+                return;
             }
         }
-
+        System.out.println(0);
 
         /**
          * 1. BFS로 빙산이 줄어드는것을 구현
@@ -112,13 +109,7 @@ public class Boj_2573 {
         }
         mapcopied(map,copy);
         return queue.size();
-//        for (int[] ints : copy) {
-//            for (int x : ints) {
-//                System.out.print(x + " ");
-//            }
-//            System.out.println();
-//        }
-//        System.out.println("==================");
+
     }
 
     private static int[][] mapcopied(int[][] copied,int[][] map) {
