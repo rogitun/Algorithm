@@ -23,35 +23,29 @@ public class Boj_1520 {
             st = new StringTokenizer(br.readLine());
             for (int j = 1; j <= N; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
+                tracking[i][j]=-1;
             }
         }
-        tracking[1][1] = 1;
-        dfs(1, 1);
+        int result = dfs(1, 1);
         System.out.println(result);
-
-
     }
 
-    static long result = 0;
     static int[] xp = {1, -1, 0, 0};
     static int[] yp = {0, 0, 1, -1};
 
-    private static void dfs(int y, int x) {
+    private static int dfs(int y, int x) {
         if (y == M && x == N) {//마지막 위치에 도달했다면
-
+            return 1;
         }
-
-        else {
+        if(tracking[y][x]==-1) {
+            tracking[y][x]=0;
             for (int i = 0; i < 4; i++) {
                 int nx = xp[i] + x;
                 int ny = yp[i] + y;
-                if (nx > 0 && ny > 0 && nx <= N && ny <= M) {
-                    if (map[ny][nx] < map[y][x]) {
-                        dfs(ny, nx);
-                    }
-                }
+                if (nx > 0 && ny > 0 && nx <= N && ny <= M && map[ny][nx] < map[y][x])
+                        tracking[y][x] += dfs(ny, nx);
             }
         }
+        return tracking[y][x];
     }
-
 }
