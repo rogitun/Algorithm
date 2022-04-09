@@ -37,7 +37,9 @@ public class Boj_1520 {
         if (y == M && x == N) {//마지막 위치에 도달했다면
             return 1;
         }
-        if(tracking[y][x]==-1) {
+        if(tracking[y][x]==-1) {//방문처리를 한다.
+            //이 위치가 M,N을 향하는 경로가 아니더라도 상관없다.
+            //0이 저장되기 때문에 영향을 끼치지 않는다.
             tracking[y][x]=0;
             for (int i = 0; i < 4; i++) {
                 int nx = xp[i] + x;
@@ -46,6 +48,7 @@ public class Boj_1520 {
                         tracking[y][x] += dfs(ny, nx);
             }
         }
+        //이미 방문한 경로거나, 4방향 탐색이 완료된 경로라면 return
         return tracking[y][x];
     }
 }
