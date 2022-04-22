@@ -37,10 +37,8 @@ public class Boj_9991 {
     private static void binary(int num,String let) {
         int s=0;
         int e=al.size()-1;
-        int mid = 0;
-        int result=0;
         while(s<e){
-            mid = (s+e)/2;
+            int mid = (s+e)/2;
             //더 앞에오면 -1, 같으면 0, 뒤에 있으면 1
             int subRange = al.get(mid).length()<let.length()?al.get(mid).length():let.length();
             if(al.get(mid).substring(0,subRange).compareTo(let)>=0){
@@ -51,8 +49,6 @@ public class Boj_9991 {
                 s = mid+1;
             }
         }
-       // System.out.println("s : " + s);
-        //System.out.println(al.get(s));
         //s는 전체 사전에서 시작 위치
         int fixIdx = al.get(s).startsWith(let)?s-1:s;
         //결과는 get(s + num);
@@ -62,10 +58,7 @@ public class Boj_9991 {
             return;
         }
         System.out.println(map.get(al.get(fixIdx+num)));
-        //System.out.println(al.get(fixIdx+num));
     }
-
     //TODO 그 시작점을 기준으로 +Num 만큼 해서 그 단어를 가져온다
     //TODO HashMap으로 그 단어의 단어사전 속 idx를 찾는다.
-
 }
