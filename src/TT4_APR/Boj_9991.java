@@ -22,15 +22,11 @@ public class Boj_9991 {
             map.put(input,i+1);
         }
         Collections.sort(al); //단어사전 정렬
-//        for (String s : al) {
-//            System.out.println(s);
-//        }
         for(int i=0;i<n;i++){
             String[] s = br.readLine().split(" ");
             int num = Integer.parseInt(s[0]);
             String let = s[1];
             binary(num,let);
-//            System.out.println(map.get(al.get(binary+num-1)));
         }
     }
     //TODO 이분탐색으로 let 으로 시작하는 단어들 중에서 da의 시작점을 찾는다.
