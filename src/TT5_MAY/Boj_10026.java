@@ -9,13 +9,9 @@ import java.util.Queue;
 public class Boj_10026 {
     static int n;
     static char[][] color;
-    static boolean[][] visit1;
-    static boolean[][] visit2;
-
     static class Point {
         int y;
         int x;
-
         public Point(int y, int x) {
             this.y = y;
             this.x = x;
@@ -33,8 +29,8 @@ public class Boj_10026 {
                 color[i][j] = input.charAt(j);
             }
         }
-        visit1 = new boolean[n][n];
-        visit2 = new boolean[n][n];
+        boolean[][] visit1 = new boolean[n][n];
+        boolean[][] visit2 = new boolean[n][n];
         int divColor = 0;
         int rg = 0;
 
