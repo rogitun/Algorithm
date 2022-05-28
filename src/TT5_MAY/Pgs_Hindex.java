@@ -6,10 +6,8 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class Pgs_Hindex {
-    public static void main(String[] args) {
-        solution(new int[]{3,9,12,13,6,1,5});
-    }
-    public static int solution(int[] citations) {
+
+    public int solution(int[] citations) {
         int answer = 0;
         Integer[] cit = Arrays.stream(citations).boxed().toArray(Integer[]::new);
         Arrays.sort(cit,Collections.reverseOrder());
@@ -21,6 +19,7 @@ public class Pgs_Hindex {
             }
             else answer += (i+1<=cit[i])?1:0;
         }
+        System.out.println();
         return answer;
     }
 }

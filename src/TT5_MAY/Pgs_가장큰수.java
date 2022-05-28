@@ -5,13 +5,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class Pgs_가장큰수 {
-    public static void main(String[] args) {
-        //solution(new int[]{6, 10, 2});
-        solution(new int[]{3, 30, 34, 5, 9});
-    }
-
-
-    public static String solution(int[] numbers) {
+    public String solution(int[] numbers) {
         String answer = "";
         ArrayList<String> al = new ArrayList<>();
         for(int x : numbers){
