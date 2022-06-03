@@ -46,15 +46,13 @@ public class Boj_8980 {
         int sum = 0;
         while (!q.isEmpty()) {
             Route now = q.poll();
-            boolean flag = true;
             int max = Integer.MAX_VALUE;
             for (int i = now.s; i < now.e; i++) {
                 if (truck[i] + now.w > C) {
                     max = Math.min(max, C - truck[i]);
-                    flag = false;
                 }
             }
-            if (flag) {
+            if (max==Integer.MAX_VALUE) {
                 for (int i = now.s; i < now.e; i++) truck[i] += now.w;
                 sum += now.w;
             }
