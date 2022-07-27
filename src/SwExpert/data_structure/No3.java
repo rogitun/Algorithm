@@ -1,4 +1,4 @@
-package SwExpert;
+package SwExpert.data_structure;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
