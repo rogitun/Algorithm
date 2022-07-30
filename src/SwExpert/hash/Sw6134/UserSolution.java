@@ -276,8 +276,6 @@ class UserSolution {
         String ex=null;
         switch (changefield) {
             case 0:
-//                list = nameIdx.get(entity.name);
-//                list.remove(entity.pk);
                 ex = entity.name;
                 entity.name = changestr;
                 makeIndex(entity.name, entity.pk, 0);
