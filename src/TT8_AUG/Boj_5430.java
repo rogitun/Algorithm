@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Boj_1334 {
+public class Boj_5430 {
     public static void main(String[] args) throws IOException {
         System.setIn(new java.io.FileInputStream("./src/TT8_AUG/sample.txt"));
 
