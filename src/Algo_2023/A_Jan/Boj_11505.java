@@ -25,12 +25,15 @@ public class Boj_11505 {
 
         arr = new int[N + 1];
         numbers = new long[N * 4];
-        Arrays.fill(numbers, 1);
+        //Arrays.fill(numbers, 1);
 
         for (int i = 1; i <= N; i++) {
             arr[i] = Integer.parseInt(br.readLine());
         }
         init(1, 1, N);
+        Arrays.stream(arr).forEach(System.out::println);
+        System.out.println("####################");
+        Arrays.stream(numbers).forEach(System.out::println);
 
         for (int i = 0; i < M + K; i++) {
             st = new StringTokenizer(br.readLine());
