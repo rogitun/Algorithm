@@ -36,9 +36,7 @@ public class Boj_4803 {
                 union(first, second);
             }
 
-
             int result = 0;
-            int cycle = 0;
             for (int i = 1; i <= n; i++) {
                 int parent = find(i);
                 if (groups[parent] != 0 && !check[parent]) {
