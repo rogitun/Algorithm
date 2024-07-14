@@ -1,4 +1,4 @@
-package Algo_2024;
+package Algo_2024.leetcode.leetcode75;
 
 // number 1071.
 public class GreatestCommonDivisorofStrings {

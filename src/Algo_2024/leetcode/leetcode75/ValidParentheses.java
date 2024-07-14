@@ -1,4 +1,4 @@
-package Algo_2024;
+package Algo_2024.leetcode.leetcode75;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
